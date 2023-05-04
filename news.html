@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+
+<head>
+	<title>Tin tức </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="header">
+			<div class="headertop_desc">
+				<div class="call">
+					<p><span>Cần sự giúp đỡ?</span> Hãy gọi <span class="number">0-xx-xxxxxxx</span></span></p>
+				</div>
+				<div class="account_desc">
+					<ul>
+						<li><a href="register.html">Đăng ký</a></li>
+						<li><a href="login.html">Đăng nhập</a></li>
+						<li><a href="delivery.html">Chính sách bảo hành</a></li>
+						<li><a href="#">Thanh toán</a></li>
+						<li><a href="#">Tài khoản của tôi</a></li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="header_top">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt="" /></a>
+				</div>
+				<div class="cart">
+					<p>Chào mừng bạn đến với shop laptop! <span>Giỏ Hàng:</span>
+					<div id="dd" class="wrapper-dropdown-2"> 0 đơn hàng(s) - 0đ
+						<ul class="dropdown">
+							<li>Bạn không có sản phẩm nào trong giỏ hàng của bạn</li>
+						</ul>
+					</div>
+					</p>
+				</div>
+				<script type="text/javascript">
+					function DropDown(el) {
+						this.dd = el;
+						this.initEvents();
+					}
+					DropDown.prototype = {
+						initEvents: function () {
+							var obj = this;
+
+							obj.dd.on('click', function (event) {
+								$(this).toggleClass('active');
+								event.stopPropagation();
+							});
+						}
+					}
+
+					$(function () {
+
+						var dd = new DropDown($('#dd'));
+
+						$(document).click(function () {
+							// all dropdowns
+							$('.wrapper-dropdown-2').removeClass('active');
+						});
+
+					});
+
+				</script>
+				<div class="clear"></div>
+			</div>
+			<div class="header_bottom">
+				<div class="menu">
+					<ul>
+						<li><a href="index.html">Trang chủ</a></li>
+						<li><a href="about.html">Thông tin</a></li>
+						<li><a href="delivery.html">Chính sách bảo hành</a></li>
+						<li class="active"><a href="news.html">Tin tức</a></li>
+						<li><a href="contact.html">Liên hệ</a></li>
+						<div class="clear"></div>
+					</ul>
+				</div>
+				<div class="search_box">
+					<form>
+						<input type="text" value="Tìm kiếm sản phẩm" onfocus="this.value = '';"
+							onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
+					</form>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="content">
+				<div class="image group">
+					<div class="grid images_3_of_1">
+						<img src="images/new1.jpg" alt="" />
+					</div>
+					<div class="grid news_desc">
+						<h3>Intel khẳng định CPU Alder Lake bị cong là “đúng kỹ thuật”, vẫn xài được bình thường </h3>
+						<h4> 11/04/2022<span><a href="#"> bởi Axium Fox</a></span></h4>
+						<p>Chip Intel thế hệ 12 “Alder Lake” là một trong những vi xử lý ấn tượng nhất hiện nay. Tuy
+							nhiên, không có gì là hoàn hảo cả, gần đây có một số người dùng đã phản ánh rằng cơ chế ngàm
+							(Independent Loading Mechanism) dùng để giữ chặt CPU trong socket LGA1700 đã khiến con chip
+							bị cong. Cụ thể là phần giữa bị lõm xuống và 2 đầu trên dưới thì bị nhô lên. Mới đây, Intel
+							có phản hồi rằng lỗi này hoàn toàn nằm trong dự tính của họ, và CPU vẫn sẽ hoạt động bình
+							thường, không có gì phải lo hết.</p>
+						<p>Lỗi CPU bị cong khiến con chip tiếp xúc không đều với phần đế của tản nhiệt, dẫn diến việc
+							CPU chạy nóng hơn và hạn chế khả năng ép xung. Lỗi này có vẻ như không quá nghiêm trọng,
+							nhưng trang AnandTech phát hiện thêm là cơ chế ngàm cũng có thể khiến phần mặt lưng của
+							socket CPU bị cong luôn, và chưa rõ là điều này sẽ ảnh hưởng như thế nào đến tuổi thọ của bo
+							mạch chủ socket LGA1700.<a href="#" title="more">[....]</a></p>
+					</div>
+				</div>
+				<div class="image group">
+					<div class="grid images_3_of_1">
+						<img src="images/new2.jpg" alt="" />
+					</div>
+					<div class="grid news_desc">
+						<h3>Cùng thời gian ra mắt, tỉ lệ người dùng Steam chịu nâng cấp lên Windows 11 chỉ bằng nửa
+							Windows 10 </h3>
+						<h4> 11/04/2022<span><a href="#"> bởi Axium Fox</a></span></h4>
+						<p>Theo khảo sát của Steam hồi tháng 3 thì số người dùng đã nâng cấp lên Windows 11 đã tăng
+							1,25% so với tháng 2, hiện đang chiếm 16,84% tổng số người dùng của Steam. Điều đáng chú ý ở
+							đây là Windows 11 đã ra mắt được 7 tháng, đó cũng là thời gian để Windows 10 đạt được tỷ
+							trọng gấp đôi là 36,97%. Hiện tại thì Windows 10 vẫn là hệ điều hành thống trị trên Steam,
+							chiếm tận 74,69% lượng người dùng. Ngoài ra thì hệ điều hành MacOS chiếm khoảng 2,43% người
+							dùng Steam, còn Linux thì vẫn ổn định ở mức 1%. Có lẽ do Windows 11 vẫn còn bộc lộ những
+							nhược điểm về sự thiếu ổn định, tương thích, lỗi và nhiều thứ khác đã khiến cho nhiều người
+							còn ngần ngại chưa muốn vội nâng cấp.</p>
+						<p>Nói một chút sang chuyện bên lề thì hiện nay card đồ họa Nvidia vẫn đang chiếm ưu thế tuyệt
+							đối trên Steam, chiếm đến 77,13% lượng người dùng. Đứng thứ 2 tất nhiên là AMD, hiện đang
+							được 14,15% người dùng Steam sử dụng. Intel đứng ở vị trí thứ 3 với 8,18% người dùng. <a
+								href="#" title="more">[....]</a></p>
+					</div>
+				</div>
+				<div class="image group">
+					<div class="grid images_3_of_1">
+						<img src="images/new3.jpg" alt="" />
+					</div>
+					<div class="grid news_desc">
+						<h3>Lộ tin công ty mẹ của Facebook đang phát triển tiền ảo “Zuck Bucks” </h3>
+						<h4> 11/04/2022<span><a href="#"> bởi Axium Fox</a></span></h4>
+						<p>Theo báo cáo từ Financial Times thì Meta có thể đã buông bỏ tiền ảo Diem của họ, nhưng công
+							ty này vẫn đang khám phá những hướng đi khác trong mảng tài chính. Công ty mẹ của Facebook
+							và Instagram được cho là đang có một vài kế hoạch đang được triển khai, bao gồm loại tiền ảo
+							(virtual currency) mà các nhân viên trong công ty gọi là “Zuck Bucks”.</p>
+						<p>Zuck Bucks được cho là lấy từ cái tên Mark Zuckerberg – nhà sáng lập, chủ tịch, kiêm CEO của
+							Meta – và khả năng cao đây không phải là tiền điện tử (cryptocurrency). Theo Financial
+							Times, Meta đang đi theo hướng giới thiệu loại tiền tệ này như dạng “token” được xài trong
+							trong các ứng dụng, và sẽ được công ty này nắm quyền kiểm soát chính. Cách này cũng tương tự
+							như những loại tiền tệ được dùng trong các tựa game hiện nay, chẳng hạn như đồng Robux nổi
+							tiếng trong game Roblox đình đám. <a href="#" title="more">[....]</a></p>
+					</div>
+				</div>
+				<div class="content-pagenation">
+					<li><a href="#">Trang đầu</a></li>
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><span>....</span></li>
+					<li><a href="#">Trang cuối</a></li>
+					<div class="clear"> </div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="wrap">
+				<div class="section group">
+					<div class="col_1_of_4 span_1_of_4">
+						<h4> Thông tin </h4>
+						<ul>
+							<li> <a href="about.html"> Giới thiệu về chúng tôi </a> </li>
+							<li> <a href="contact.html"> Dịch vụ Khách hàng </a> </li>
+							<li> <a href="#"> Tìm kiếm Nâng cao </a> </li>
+							<li> <a href="delivery.html"> Đặt hàng và Trả hàng </a> </li>
+							<li> <a href="contact.html"> Liên hệ với Chúng tôi </a> </li>
+						</ul>
+					</div>
+					<div class="col_1_of_4 span_1_of_4">
+						<h4> Tại sao nên mua hàng của chúng tôi </h4>
+						<ul>
+							<li> <a href="about.html"> Giới thiệu về chúng tôi </a> </li>
+							<li> <a href="contact.html"> Dịch vụ Khách hàng </a> </li>
+							<li> <a href="#"> Chính sách Bảo mật </a> </li>
+							<li> <a href="contact.html"> Sơ đồ Trang web </a> </li>
+							<li> <a href="#"> Cụm từ Tìm kiếm </a> </li>
+						</ul>
+					</div>
+					<div class="col_1_of_4 span_1_of_4">
+						<h4> Tài khoản của tôi </h4>
+						<ul>
+							<li> <a href="contact.html"> Đăng nhập </a> </li>
+							<li> <a href="index.html"> Xem Giỏ hàng </a> </li>
+							<li> <a href="#"> Danh sách yêu thích của tôi </a> </li>
+							<li> <a href="#"> Theo dõi Đơn hàng của tôi </a> </li>
+							<li> <a href="contact.html"> Trợ giúp </a> </li>
+						</ul>
+					</div>
+					<div class="col_1_of_4 span_1_of_4">
+						<h4>Liên hệ</h4>
+						<ul>
+							<li><span>+91-123-456789</span></li>
+							<li><span>+00-123-000000</span></li>
+						</ul>
+						<div class="social-icons">
+							<h4>Theo dõi chúng tôi</h4>
+							<ul>
+								<li><a href="#" target="_blank"><img src="images/facebook.png" alt="" /></a></li>
+								<li><a href="#" target="_blank"><img src="images/twitter.png" alt="" /></a></li>
+								<li><a href="#" target="_blank"><img src="images/skype.png" alt="" /> </a></li>
+								<li><a href="#" target="_blank"> <img src="images/dribbble.png" alt="" /></a></li>
+								<li><a href="#" target="_blank"> <img src="images/linkedin.png" alt="" /></a></li>
+								<div class="clear"></div>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copy_right">
+				<p>&copy; Lê thành đạt 20116461 || Trương Sĩ Ngọc Huy 20108951 </a></p>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+		</script>
+		<a href="#" id="toTop"><span id="toTopHover"> </span></a>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+
+<!DOCTYPE HTML>
+
+<head>
+	<title>Thông tin trang web</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="header">
+			<div class="headertop_desc">
+				<div class="call">
+					<p><span>Cần sự giúp đỡ?</span> Hãy gọi <span class="number">0-xx-xxxxxxx</span></span></p>
+				</div>
+				<div class="account_desc">
+					<ul>
+						<li><a href="register.html">Đăng ký</a></li>
+						<li><a href="login.html">Đăng nhập</a></li>
+						<li><a href="delivery.html">Chính sách bảo hành</a></li>
+						<li><a href="#">Thanh toán</a></li>
+						<li><a href="#">Tài khoản của tôi</a></li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="header_top">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt="" /></a>
+				</div>
+				<div class="cart">
+					<p>Chào mừng bạn đến với shop laptop! <span> Giỏ Hàng:</span>
+					<div id="dd" class="wrapper-dropdown-2"> 0 đơn hàng(s) - 0đ
+						<ul class="dropdown">
+							<li>Bạn không có sản phẩm nào trong giỏ hàng của bạn</li>
+						</ul>
+					</div>
+					</p>
+				</div>
+				<script type="text/javascript">
+					function DropDown(el) {
+						this.dd = el;
+						this.initEvents();
+					}
+					DropDown.prototype = {
+						initEvents: function () {
+							var obj = this;
+
+							obj.dd.on('click', function (event) {
+								$(this).toggleClass('active');
+								event.stopPropagation();
+							});
+						}
+					}
+
+					$(function () {
+
+						var dd = new DropDown($('#dd'));
+
+						$(document).click(function () {
+							// all dropdowns
+							$('.wrapper-dropdown-2').removeClass('active');
+						});
+
+					});
+
+				</script>
+				<div class="clear"></div>
+			</div>
+			<div class="header_bottom">
+				<div class="menu">
+					<ul>
+						<li><a href="index.html">Trang chủ</a></li>
+						<li class="active"><a href="about.html">Thông tin</a></li>
+						<li><a href="delivery.html">Chính sách bảo hành</a></li>
+						<li><a href="news.html">Tin tức</a></li>
+						<li><a href="contact.html">Liên hệ</a></li>
+						<div class="clear"></div>
+					</ul>
+				</div>
+				<div class="search_box">
+					<form>
+						<input type="text" value="Tìm kiếm sản phẩm" onfocus="this.value = '';"
+							onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
+					</form>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="content">
+				<div class="section group">
+					<div class="col_1_of_3 span_1_of_3">
+						<h3>Chúng tôi là ai?</h3>
+						<img src="images/dai-hoc-cong-nghiep-hcm-3007-1576507638.jpg" alt="">
+						<p>Trường Đại học Công nghiệp Thành phố Hồ Chí Minh (tiếng Anh: Industrial University of Ho Chi
+							Minh City) là một trường đại học định hướng ứng dụng và thực hành, trực thuộc Bộ Công
+							Thương, chuyên đào tạo nhóm ngành kinh tế công nghiệp và kỹ thuật công nghiệp, được thành
+							lập từ ngày 24 tháng 12 năm 2004.</p>
+						<p>Ngày 24 tháng 9 năm 2018, trường đã đạt được chứng nhận kiểm định AUN-QA của tổ chức ASEAN
+							University Network, chứng nhận bằng cấp của trường có giá trị sử dụng tại các nước Đông Nam
+							Á</p>
+					</div>
+					<div class="col_1_of_3 span_1_of_3">
+						<h3>>Lịch sử hình thành và phát triển</h3>
+						<div class="history-desc">
+							<div class="year">
+								<p>1956-</p>
+							</div>
+							<p class="history">Tiền thân của Trường Đại học Công nghiệp Thành phố Hồ Chí Minh là Trường
+								Huấn nghiệp Gò Vấp, một trường dạy nghề tư thục do các tu sĩ Dòng Salêdiêng Don Bosco
+								(Việt Nam) thành lập ngày 11 tháng 11 năm 1956 ở xã Hạnh Thông, quận Gò Vấp, tỉnh Gia
+								Định, Việt Nam Cộng hòa. </p>
+							<div class="clear"></div>
+						</div>
+						<div class="history-desc">
+							<div class="year">
+								<p>1968 -</p>
+							</div>
+							<p class="history">Đến năm 1968, trường đổi tên thành Trường tư thục Trung học Kỹ thuật Đệ
+								nhất cấp Don Bosco. Điều hành cơ sở do Linh mục Phêrô Cuisset Quý giám đốc Dòng
+								Salêdiêng Don Bosco - Gò Vấp và Linh mục Isiđôrô Lê Hướng hiệu trưởng Trường Huấn nghiệp
+								Gò Vấp (1956 - 1973).</p>
+							<div class="clear"></div>
+						</div>
+						<div class="history-desc">
+							<div class="year">
+								<p>1970 -</p>
+							</div>
+							<p class="history">Đầu năm 1970, nhà trường được nâng cấp từ bậc đệ nhất cấp thành bậc đệ
+								nhị cấp, được gọi tắt là Trường Trung học Kỹ thuật Don Bosco. Vào năm 1973 do cơ cấu tổ
+								chức nhà dòng Salêdiêng Don Bosco, linh mục Gioan Nguyễn Văn Ty được tín nhiệm làm Giám
+								đốc dòng Salêdiêng Don Bosco và kiêm nhiệm chức vụ Hiệu trưởng Trường Trung học Kỹ thuật
+								Don Bosco (1973 - 1975).</p>
+							<div class="clear"></div>
+						</div>
+						<div class="history-desc">
+							<div class="year">
+								<p>1975 -</p>
+							</div>
+							<p class="history">Cuối 1975, chính quyền Việt Nam trưng dụng trường sở và ngày 19 tháng 12
+								năm 1975, bàn giao cho Tổng cục Cơ khí Luyện kim và Điện tử. Ngày 01 tháng 01 năm 1976,
+								trường hoạt động trở lại với tên Trường kỹ thuật Don Bosco.. Năm 1978, trường được đổi
+								tên thành Trường Công nhân Kỹ thuật IV, thuộc Bộ Cơ khí và Luyện kim.</p>
+							<div class="clear"></div>
+						</div>
+						<div class="history-desc">
+							<div class="year">
+								<p>1994-</p>
+							</div>
+							<p class="history">Năm 1994, trường hợp nhất với Trường Trung học Hóa chất 2 trú đóng tại
+								Biên Hòa, tỉnh Đồng Nai thành Trường Trung học Kỹ thuật Công nghiệp IV, thuộc Bộ Công
+								nghiệp. Tháng 3 năm 1999, trường được nâng cấp lên thành Trường Cao đẳng Công nghiệp IV,
+								vẫn trực thuộc Bộ Công nghiệp.</p>
+							<div class="clear"></div>
+						</div>
+						<div class="history-desc">
+							<div class="year">
+								<p>2004-</p>
+							</div>
+							<p class="history">Ngày 24 tháng 12 năm 2004, trường được nâng cấp thành Trường Đại học Công
+								nghiệp Thành phố Hồ Chí Minh, thuộc Bộ Công Thương theo quyết định 214/2004/QĐ-TTg của
+								thủ tướng chính phủ.</p>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="col_1_of_3 span_1_of_3">
+						<h3>Thành tích của shop </h3>
+						<p>Huân chương Lao động hạng ba năm 1995. <br>
+							Huân chương Lao động hạng nhì năm 1999. <br>
+							Huân chương Lao động hạng nhất năm 2004. <br>
+							Huân chương Độc lập hạng ba năm 2016. <br>
+							Trường Đại học đầu tiên khu vực phía Nam đạt chuẩn kiểm định chất lượng giáo dục cấp Quốc
+							gia năm 2016. <br>
+							Trường Đại học đầu tiên của Việt Nam nhận được chứng chỉ chất lượng ISO 9001:2000 do tổ chức
+							chứng nhận Quốc tế TÜV Rheinland - Cộng hòa Liên bang Đức.[11]</p>
+						<!-- <div class="list">
+							<ul>
+								<li><a href="#">Text of the printing</a></li>
+								<li><a href="#">Lorem Ipsum has been the standard</a></li>
+								<li><a href="#">Dummy text ever since the 1500s</a></li>
+								<li><a href="#">Unknown printer took a galley</a></li>
+								<li><a href="#">Led it to make a type specimen</a></li>
+								<li><a href="#">Not only five centuries</a></li>
+								<li><a href="#">Electronic typesetting</a></li>
+								<li><a href="#">Unchanged. It was popularised</a></li>
+								<li><a href="#">Sheets containing Lorem Ipsume</a></li>
+							</ul>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+							laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+							voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="wrap">
+				<div class="section group">
+					<div class="col_1_of_4 span_1_of_4">
+						<h4> Thông tin </h4>
+						<ul>
+							<li> <a href="about.html"> Giới thiệu về chúng tôi </a> </li>
+							<li> <a href="contact.html"> Dịch vụ Khách hàng </a> </li>
+							<li> <a href="#"> Tìm kiếm Nâng cao </a> </li>
+							<li> <a href="delivery.html"> Đặt hàng và Trả hàng </a> </li>
+							<li> <a href="contact.html"> Liên hệ với Chúng tôi </a> </li>
+						</ul>
+					</div>
+					<div class="col_1_of_4 span_1_of_4">
+						<h4> Tại sao nên mua hàng của chúng tôi </h4>
+						<ul>
+							<li> <a href="about.html"> Giới thiệu về chúng tôi </a> </li>
+							<li> <a href="contact.html"> Dịch vụ Khách hàng </a> </li>
+							<li> <a href="#"> Chính sách Bảo mật </a> </li>
+							<li> <a href="contact.html"> Sơ đồ Trang web </a> </li>
+							<li> <a href="#"> Cụm từ Tìm kiếm </a> </li>
+						</ul>
+					</div>
+					<div class="col_1_of_4 span_1_of_4">
+						<h4> Tài khoản của tôi </h4>
+						<ul>
+							<li> <a href="contact.html"> Đăng nhập </a> </li>
+							<li> <a href="index.html"> Xem Giỏ hàng </a> </li>
+							<li> <a href="#"> Danh sách yêu thích của tôi </a> </li>
+							<li> <a href="#"> Theo dõi Đơn hàng của tôi </a> </li>
+							<li> <a href="contact.html"> Trợ giúp </a> </li>
+						</ul>
+					</div>
+					<div class="col_1_of_4 span_1_of_4">
+						<h4>Liên hệ</h4>
+						<ul>
+							<li><span>+91-123-456789</span></li>
+							<li><span>+00-123-000000</span></li>
+						</ul>
+						<div class="social-icons">
+							<h4>Theo dõi chúng tôi</h4>
+							<ul>
+								<li><a href="#" target="_blank"><img src="images/facebook.png" alt="" /></a></li>
+								<li><a href="#" target="_blank"><img src="images/twitter.png" alt="" /></a></li>
+								<li><a href="#" target="_blank"><img src="images/skype.png" alt="" /> </a></li>
+								<li><a href="#" target="_blank"> <img src="images/dribbble.png" alt="" /></a></li>
+								<li><a href="#" target="_blank"> <img src="images/linkedin.png" alt="" /></a></li>
+								<div class="clear"></div>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copy_right">
+				<p>&copy; Lê thành đạt 20116461 || Trương Sĩ Ngọc Huy 20108951 </a></p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+		});
+	</script>
+	<a href="#" id="toTop"><span id="toTopHover"> </span></a>
+</body>
+
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="../web/css/resgin.css"> -->
+</head>
+
+<body>
+    <!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+    <!DOCTYPE HTML>
+
+    <head>
+        <title>Đăng kí tài khoản </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/move-top.js"></script>
+        <script type="text/javascript" src="js/easing.js"></script>
+        <script>
+            $(document).ready(function () {
+                function kiemtraten(){
+                    let ten = $("#txtname").val();
+                    let patten = /^[A-Z][a-zA-Z]*(\s[A-Z][a-zA-Z]*)*$/;
+                    if(patten.test(ten)){
+                        $("#tb1").html("*");
+                        return true;
+                    }
+                    else{
+                        $("#tb1").html("chữ cái đầu viết hoa")
+                        return false
+                    }
+                }
+                $("#txtname").blur(kiemtraten);
+
+                function kiemtrasdt(){
+                    let sdt = $("#txtsdt").val();
+                    let patsdt = /^0\d{3}-\d{3}-\d{3}$/;
+                    if(patsdt.test(sdt)){
+                        $("#tb2").html("*");
+                        return true;
+                    }
+                    else{
+                        $("#tb2").html("nhập số điện thoại theo mẫu: 0xxx-xxx-xxx")
+                        return false
+                    }
+                }
+                $("#txtsdt").blur(kiemtrasdt);
+
+                function kiemtraemail(){
+                    let email = $("#txtemail").val();
+                    let patemail = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+                    if(patemail.test(email)){
+                        $("#tb3").html("*");
+                        return true;
+                    }
+                    else{
+                        $("#tb3").html("nhập email theo mẫu : xxxx@xxxx.xxx")
+                        return false
+                    }
+                }
+                $("#txtemail").blur(kiemtraemail);
+
+                function kiemtrauser(){
+                    let user = $("#txtuser").val();
+                    let patuser = /^[a-z0-9]{3,16}$/;
+                    if(patuser.test(user)){
+                        $("#tb4").html("*");
+                        return true;
+                    }
+                    else{
+                        $("#tb4").html("Tên đăng nhập phải có ít nhất 3 ký tự tối đa 16 ký tự")
+                        return false
+                    }
+                }
+                $("#txtuser").blur(kiemtrauser);
+
+                function kiemtramk(){
+                    let pass = $("#txtpass").val();
+                    let patpass = /^[a-z\d]{6,}$/i;
+                    if(patpass.test(pass)){
+                        $("#tb5").html("*");
+                        return true;
+                    }
+                    else{
+                        $("#tb5").html("mật khẩu phải chứa 6 kí tự trở lên")
+                        return false
+                    }
+                }
+                $("#txtpass").blur(kiemtramk);
+
+                function kiemtramk1(){
+                    let pass = $("#txtpass1").val();
+                    if(pass == $("#txtpass").val()){
+                        $("#tb6").html("*");
+                        return true;
+                    }
+                    else{
+                        $("#tb6").html("mật khẩu không khớp")
+                        return false
+                    }
+                }
+                $("#txtpass1").blur(kiemtramk1);
+
+
+                $("#inp").click(function(){
+                    alert("đăng ký thành công");
+                    let ten = $("#txtname").val();
+                    let sdt = $("#txtsdt").val();
+                    let email = $("#txtemail").val();
+                    let user = $("#txtuser").val();
+                    let pass = $("#txtpass").val();
+                    let tnew = "<tr><td>"+ten+"</td><td>"+sdt+"</td><td>"+email+"</td><td>"+user+"</td><td>"+pass+"</td></tr>";
+                    $("#tab").append(tnew);
+                })
+                
+            });
+        </script>
+    </head>
+
+    <body>
+
+        <div class="wrap">
+            <div class="header">
+                <div class="headertop_desc">
+                    <div class="call">
+                        <p><span>Cần sự giúp đỡ?</span> Hãy gọi <span class="number">0-xx-xxxxxxx</span></span></p>
+                    </div>
+                    <div class="account_desc">
+                        <ul>
+                            <li><a href="register.html">Đăng ký</a></li>
+                            <li><a href="login.html">Đăng nhập</a></li>
+                            <li><a href="delivery.html">Chính sách bảo hành</a></li>
+                            <li><a href="#">Thanh Toán</a></li>
+                            <li><a href="#">Tài khoản của tôi</a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="header_top">
+                    <div class="logo">
+                        <a href="index.html"><img src="images/logo.png" alt="" /></a>
+                    </div>
+                    <div class="cart">
+                        <p>Chào mừng bạn đến với shop laptop! <span>Giỏ Hàng:</span>
+                        <div id="dd" class="wrapper-dropdown-2"> 0 đơn hàng(s) - 0đ
+                            <ul class="dropdown">
+                                <li>Bạn không có sản phẩm nào trong giỏ hàng của bạn</li>
+                            </ul>
+                        </div>
+                        </p>
+                    </div>
+                    <script type="text/javascript">
+                        function DropDown(el) {
+                            this.dd = el;
+                            this.initEvents();
+                        }
+                        DropDown.prototype = {
+                            initEvents: function () {
+                                var obj = this;
+
+                                obj.dd.on('click', function (event) {
+                                    $(this).toggleClass('active');
+                                    event.stopPropagation();
+                                });
+                            }
+                        }
+
+                        $(function () {
+
+                            var dd = new DropDown($('#dd'));
+
+                            $(document).click(function () {
+                                // all dropdowns
+                                $('.wrapper-dropdown-2').removeClass('active');
+                            });
+
+                        });
+
+                    </script>
+                    <div class="clear"></div>
+                </div>
+                <div class="header_bottom">
+                    <div class="menu">
+                        <ul>
+                            <li><a href="index.html">Trang chủ</a></li>
+                            <li><a href="about.html">Thông tin</a></li>
+                            <li><a href="delivery.html">Chính sách bảo hành</a></li>
+                            <li><a href="news.html">Tin tức</a></li>
+                            <li><a href="contact.html">Liên hệ</a></li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="search_box">
+                        <form>
+                            <input type="text" value="Tìm kiếm sản phẩm" onfocus="this.value = '';"
+                                onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
+                        </form>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="row-fluid">
+                            <div class="col-md-offset-4 col-md-4" id="box">
+                                <h2>Đăng Ký</h2>
+                                <hr>
+                                <form class="form-horizontal" action="" method="get" id="login_form">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <div class="input-group"> 
+                                                    <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-user" ></i></span> 
+                                                    <input name="first_name" placeholder="Họ và Tên" class="form-control" id="txtname"
+                                                        type="text">
+                                                </div>
+
+                                                <span id="tb1" style="color: red;">*</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <div class="input-group"> <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-user"></i></span> <input
+                                                        name="first_name" placeholder="Số Điện Thoại: 0xxx-xxx-xxx" id="txtsdt"
+                                                        class="form-control" type="text">
+                                                </div>
+
+                                                <span id="tb2" style="color: red;">*</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <div class="input-group"> <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-user"></i></span> <input
+                                                        name="first_name" placeholder="Email của bạn" id="txtemail"
+                                                        class="form-control" type="text">
+                                                </div>
+
+                                                <span id="tb3" style="color: red;">*</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <div class="input-group"> <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-user"></i></span> <input
+                                                        name="first_name" placeholder="Tên Đăng Nhập" id="txtuser"
+                                                        class="form-control" type="text">
+                                                </div>
+
+                                                <span id="tb4" style="color: red;">*</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <div class="input-group"> <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-lock"></i></span> <input
+                                                        name="email" placeholder="Mật Khẩu" class="form-control" id="txtpass"
+                                                        type="password">
+                                                </div>
+
+                                                <span id="tb5" style="color: red;">*</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <div class="input-group"> <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-lock"></i></span> <input
+                                                        name="email" placeholder="Nhập lại Mật Khẩu" id="txtpass1"
+                                                        class="form-control" type="password">
+                                                </div>
+                                                <span id="tb6" style="color: red;">*</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <button type="button" class="btn btn-md btn-danger pull-right" id="inp">
+                                                    Đăng ký
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <table class="table table-bordered table-dark table-hover table-primary table-light table-striped" id="tab">
+                                        <tr>
+                                            <th>Họ Và Tên</th>
+                                            <th>SDT</th>
+                                            <th>Email</th>
+                                            <th>Tên Đăng Nhập</th>
+                                            <th>Mật Khẩu</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Le Thanh Dat</td>
+                                            <td>0365-693-101</td>
+                                            <td>thanhdat@gmail.com</td>
+                                            <td>dat123</td>
+                                            <td>123456</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="footer">
+            <div class="wrap">
+                <div class="section group">
+                    <div class="col_1_of_4 span_1_of_4">
+                        <h4> Thông tin </h4>
+                        <ul>
+                            <li> <a href="about.html"> Giới thiệu về chúng tôi </a> </li>
+                            <li> <a href="contact.html"> Dịch vụ Khách hàng </a> </li>
+                            <li> <a href="#"> Tìm kiếm Nâng cao </a> </li>
+                            <li> <a href="delivery.html"> Đặt hàng và Trả hàng </a> </li>
+                            <li> <a href="contact.html"> Liên hệ với Chúng tôi </a> </li>
+                        </ul>
+                    </div>
+                    <div class="col_1_of_4 span_1_of_4">
+                        <h4> Tại sao nên mua hàng của chúng tôi </h4>
+                        <ul>
+                            <li> <a href="about.html"> Giới thiệu về chúng tôi </a> </li>
+                            <li> <a href="contact.html"> Dịch vụ Khách hàng </a> </li>
+                            <li> <a href="#"> Chính sách Bảo mật </a> </li>
+                            <li> <a href="contact.html"> Sơ đồ Trang web </a> </li>
+                            <li> <a href="#"> Cụm từ Tìm kiếm </a> </li>
+                        </ul>
+                    </div>
+                    <div class="col_1_of_4 span_1_of_4">
+                        <h4> Tài khoản của tôi </h4>
+                        <ul>
+                            <li> <a href="contact.html"> Đăng nhập </a> </li>
+                            <li> <a href="index.html"> Xem Giỏ hàng </a> </li>
+                            <li> <a href="#"> Danh sách yêu thích của tôi </a> </li>
+                            <li> <a href="#"> Theo dõi Đơn hàng của tôi </a> </li>
+                            <li> <a href="contact.html"> Trợ giúp </a> </li>
+                        </ul>
+                    </div>
+                    <div class="col_1_of_4 span_1_of_4">
+                        <h4>Liên hệ</h4>
+                        <ul>
+                            <li><span>+91-123-456789</span></li>
+                            <li><span>+00-123-000000</span></li>
+                        </ul>
+                        <div class="social-icons">
+                            <h4>Theo dõi chúng tôi</h4>
+                            <ul>
+                                <li><a href="#" target="_blank"><img src="images/facebook.png" alt="" /></a></li>
+                                <li><a href="#" target="_blank"><img src="images/twitter.png" alt="" /></a></li>
+                                <li><a href="#" target="_blank"><img src="images/skype.png" alt="" /> </a></li>
+                                <li><a href="#" target="_blank"> <img src="images/dribbble.png" alt="" /></a></li>
+                                <li><a href="#" target="_blank"> <img src="images/linkedin.png" alt="" /></a></li>
+                                <div class="clear"></div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copy_right">
+                <p>&copy; Lê thành đạt 20116461 || Trương Sĩ Ngọc Huy 20108951 </a></p>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $().UItoTop({ easingType: 'easeOutQuart' });
+
+            });
+        </script>
+        <a href="#" id="toTop"><span id="toTopHover"> </span></a>
+        </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $().UItoTop({ easingType: 'easeOutQuart' });
+
+            });
+        </script>
+        <a href="#" id="toTop"><span id="toTopHover"> </span></a>
+    </body>
+
+</html>
+
+
+
+
+</body>
+
+</html>
